@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="datetime-local"], button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item, .history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    word-break: break-word; /* Prevents long text from breaking layout */
+}
+
+.task-text, .task-time {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+button.complete-btn, button.edit-btn, button.delete-btn {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.complete-btn:hover {
+    background-color: #218838;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For small devices (phones in portrait mode) */
+@media (max-width: 576px) {
+    .container {
+        padding: 15px;
+        max-width: 100%; /* Make full width on small screens */
+    }
+
+    .task-item, .history-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .task-text, .task-time {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    button.complete-btn, button.edit-btn, button.delete-btn {
+        width: 100%; /* Buttons take full width */
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+/* For tablets (landscape orientation) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .task-item, .history-item {
+        padding: 12px;
+    }
+}
+
+/* For larger devices (desktops) */
+@media (min-width: 769px) {
+    .container {
+        max-width: 600px;
+    }
+}
